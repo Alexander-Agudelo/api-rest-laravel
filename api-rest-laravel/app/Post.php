@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    //Declaro la tabla en concreto que va a utilizar
     protected $table = 'posts';
+
+    protected $fillable = [
+        'title', 'content', 'category_id',
+    ];
     
     //Relacion de uno a mucho inversa(muchos a uno)
     //muchos posts pueden ser creados por un usuario 

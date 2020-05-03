@@ -4,8 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
-{
+class Category extends Model {
     //Declaro la tabla en concreto que va a utilizar
     protected $table = 'categories';
     

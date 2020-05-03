@@ -66,7 +66,7 @@ class JwtAuth{
     	$auth = false;
 
     	try {
-    		$jwt =str_replace('"', '', $jwt);
+    		$jwt =str_replace('"', '', $jwt); // Elimino las " que pueda traer mi token, como un trim a token
     		$decoded = JWT::decode($jwt, $this->key, ['HS256']);
     	}catch (\UnexpectedValueException $e) {
     		$auth = false;
